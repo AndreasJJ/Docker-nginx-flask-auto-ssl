@@ -35,8 +35,8 @@ docker-compose run --rm --entrypoint "\
 echo
 
 
-echo "### Starting nginx ..."
-docker-compose up --force-recreate -d
+echo "### Starting web ..."
+docker-compose up --force-recreate -d web
 echo
 
 echo "### Deleting dummy certificate for $domains ..."
@@ -73,5 +73,5 @@ docker-compose run --rm --entrypoint "\
     --force-renewal" certbot
 echo
 
-echo "### Reloading nginx ..."
+echo "### Reloading web ..."
 docker-compose exec web web -s reload
