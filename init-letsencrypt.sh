@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "### Building container ..."
+docker-compose build --no-cache
+echo
+
 domains=(meem.no www.meem.no)
 rsa_key_size=4096
 data_path="./data/certbot"
@@ -34,7 +38,7 @@ echo
 
 
 echo "### Starting nginx ..."
-docker-compose up --force-recreate -d
+docker-compose up --force-recreate -d web
 echo
 
 echo "### Deleting dummy certificate for $domains ..."
