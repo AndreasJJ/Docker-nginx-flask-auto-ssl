@@ -9,7 +9,7 @@ services:
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
-    command: "-c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done'"
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done'"
   certbot:
     image: certbot/certbot
     restart: unless-stopped
