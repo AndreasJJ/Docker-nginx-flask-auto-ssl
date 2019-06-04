@@ -79,4 +79,4 @@ echo "### Reloading web ..."
 docker-compose exec web nginx -s reload
 
 echo "### Starting up containers ..."
-docker-compose up
+docker-compose up -d
