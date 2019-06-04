@@ -24,6 +24,4 @@ COPY . /home/host
 
 WORKDIR /home/host
 
-ENTRYPOINT ["bash"]
-
 CMD ["/usr/bin/supervisord"]
