@@ -2,7 +2,7 @@
 A simple docker(-compose) container with nginx and auto renewal https from letsencrypt for uwsgi applications.
 
 # How to use?
-The user's manual can be found at [the wiki]()
+Simply place your application inside the application folder, or replace the application folder with whatever your application folder is called and modify the **wsgi.py** file to get the ***app*** object from your folder.
 
 # File Structure and Explanation
 ```
