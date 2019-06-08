@@ -2,9 +2,9 @@
 A simple docker(-compose) container with nginx and auto renewal https from letsencrypt for uwsgi applications.
 
 # How to use?
-Replace all occurrences of <domain> with your domain in the **flask-site-nginx.conf** and **init-letsencrypt.sh** files.
+Replace all occurrences of \<domain\> with your domain in the **flask-site-nginx.conf** and **init-letsencrypt.sh** files.
   
-Replace <email> with your email in the **init-letsencrypt.sh** file.
+Replace \<email\> with your email in the **init-letsencrypt.sh** file.
 
 Then simply place your application inside the application folder, or replace the application folder with whatever your application folder is called and modify the **wsgi.py** file to get the ***app*** object from your folder.
 
