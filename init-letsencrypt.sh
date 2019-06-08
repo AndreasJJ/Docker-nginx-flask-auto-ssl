@@ -4,10 +4,10 @@ echo "### Building container ..."
 docker-compose build --no-cache
 echo
 
-domains=(meem.no www.meem.no)
+domains=(<domain> www.<domain>)
 rsa_key_size=4096
 data_path="./data/certbot"
-email="andreasjj@gmail.com" # Adding a valid address is strongly recommended
+email="<email>" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
