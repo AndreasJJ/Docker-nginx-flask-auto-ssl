@@ -1,5 +1,5 @@
-# A Flask docker container with HTTPS boilerplate
-A simple docker(-compose) container with nginx and auto renewal https from letsencrypt for uwsgi applications.
+# A Flask docker container with auto ssl boilerplate
+A simple docker(-compose) container with nginx and auto renewal ssl from letsencrypt for uwsgi applications.
 
 # How to use?
 Replace all occurrences of \<domain\> with your domain in the **flask-site-nginx.conf** and **init-letsencrypt.sh** files.
