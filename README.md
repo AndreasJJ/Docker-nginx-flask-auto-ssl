@@ -1,5 +1,5 @@
 # A Flask docker container with HTTPS boilerplate
-A simple docker(-compose) container with nginx and auto renewal https for uwsgi applications.
+A simple docker(-compose) container with nginx and auto renewal https from letsencrypt for uwsgi applications.
 
 # How to use?
 The user's manual can be found at [the wiki]()
