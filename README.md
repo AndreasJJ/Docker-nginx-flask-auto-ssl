@@ -4,6 +4,34 @@ A simple docker(-compose) container with nginx and auto renewal https from letse
 # How to use?
 The user's manual can be found at [the wiki]()
 
+# File Structure and Explanation
+```
+Root 
+├── application
+│   ├── \_\_init\_\_.py
+│   └── router.py
+├── Dockerfile
+├── docker-compose.yml
+├── flask-site-nginx.conf
+├── nginx.conf
+├── init-letsencrypt.sh
+├── requirements.txt
+├── supervisord.conf
+├── uwsgi.ini
+├── wsgi.py
+└── [...]
+```
+* __application__: Simple test flask application. This is where you'd place your application
+* __Dockerfile__: Dockerfile to assemble image with nginx, supervisord and uwsgi
+* __docker-compose.yml__: Compose file for certbot and application container open on port 80 and 443
+* __flask-site-nginx.conf__: Basic nginx site configuration for application with https
+* __nginx.conf__: Standard nginx configuration with daemon off.
+* __init-letsencrypt.sh__: modified script from wmnnd to build container, fix ssl certificate and start the application and certbot container
+* __requirements.txt__: A document containing all required pip packages for your application
+* __supervisord.conf__: Basic supervisord configuration for uwsgi and nginx
+* __uwsgi.ini__: Uwsgi configuration
+* __wsgi.py__: Application start file that uwsgi will run
+
 # Contribute
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change. 
