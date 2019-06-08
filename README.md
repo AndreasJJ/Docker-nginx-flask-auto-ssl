@@ -6,7 +6,9 @@ Replace all occurrences of \<domain\> with your domain in the **flask-site-nginx
   
 Replace \<email\> with your email in the **init-letsencrypt.sh** file.
 
-Then simply place your application inside the application folder, or replace the application folder with whatever your application folder is called and modify the **wsgi.py** file to get the ***app*** object from your folder.
+Place your application inside the application folder, or replace the application folder with whatever your application folder is called and modify the **wsgi.py** file to get the ***app*** object from your folder.
+
+Change the permissions on the init-letsencrypt.sh script such that you can run it, then run it.
 
 # File Structure and Explanation
 ```
