@@ -3,6 +3,7 @@ FROM python:3.7
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
         libatlas-base-dev gfortran nginx supervisor
+RUN apt-get install sqlite3
 
 RUN pip3 install uwsgi
 
@@ -23,5 +24,9 @@ COPY supervisord.conf /etc/supervisor/conf.d/
 COPY . /home/host
 
 WORKDIR /home/host
+
+RUN chmod 777 /home/host/host/database/database.db
+RUN mkdir tmp /home/host/host/uploads
+run chmod 777 /home/host/host/uploads/tmp
 
 CMD ["sh","-c", "/usr/bin/supervisord && 'while :; do sleep 6h & wait $${!}; nginx -s reload; done'"]
