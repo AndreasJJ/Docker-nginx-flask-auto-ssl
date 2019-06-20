@@ -25,8 +25,4 @@ COPY . /home/host
 
 WORKDIR /home/host
 
-RUN chmod 777 /home/host/host/database/database.db
-RUN mkdir /home/host/host/uploads/tmp
-RUN chmod 777 /home/host/host/uploads/tmp
-
 CMD ["sh","-c", "/usr/bin/supervisord && 'while :; do sleep 6h & wait $${!}; nginx -s reload; done'"]
